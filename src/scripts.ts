@@ -45,3 +45,33 @@ const dhakaLatLong:readonly [number, number]= [23.8103, 90.4125];
 // dhakaLatLong[0] = 24.8103; // This will give an error because dhakaLatLong is of type readonly [number, number] and we are trying to assign a number to the first element
 // dhakaLatLong[1] = 91.4125; // This will give an error because dhakaLatLong is of type readonly [number, number] and we are trying to assign a number to the second element
 
+// optional and default parameters
+
+const multiply = (a: number, b: number, c?: number): number => {
+    if (c) {
+        return a * b * c;
+    } else {
+        return a * b;
+    }
+};
+
+console.log(multiply(2, 3));
+console.log(multiply(2, 3, 4));
+
+const concatName = (firstName:string, lastName:string):string=>{
+if(!lastName){
+    return firstName;
+}
+return firstName + " " + lastName;
+}
+
+console.log(concatName("John", "Doe"));
+console.log(concatName("John", ""));
+
+
+const greetings = ( fullName:string,greeting:string="Hello"):string=>{
+    console.log(greeting + " " + fullName);
+    return `${greeting} ${fullName}`;
+}
+greetings("Good Morning", "Mr. Switch");
+greetings("Mr. Switch");
