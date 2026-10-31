@@ -17,3 +17,4 @@ const addTwo = (a, b) => {
     return a + b;
 };
 console.log(addTwo(5, 10));
+console.log(addTwo(40, 50));

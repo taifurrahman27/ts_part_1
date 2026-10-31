@@ -23,3 +23,4 @@ const addTwo :(a: number, b: number) => number = (a, b) =>{
 }
 
 console.log(addTwo(5,10));
+console.log(addTwo(40,50));
