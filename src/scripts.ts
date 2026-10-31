@@ -75,3 +75,46 @@ const greetings = ( fullName:string,greeting:string="Hello"):string=>{
 }
 greetings("Good Morning", "Mr. Switch");
 greetings("Mr. Switch");
+
+
+
+// objects and interfaces
+
+const user: {
+    name: string;
+    age: number;
+    isAdmin: boolean;
+    action: () => void;
+    badges: string[];
+}={
+    name: "Tasim",
+    age: 25,
+    isAdmin: false,
+    action: ()=>console.log("Hello Taifur"),
+    badges: ["badge1", "badge2"],
+}
+
+console.log(user);
+
+console.log(user.name);
+
+
+interface IUser {
+    name: string;
+    age: number;
+    isAdmin: boolean;
+    action: () => void;
+    badges: string[];
+}
+
+const user2:IUser={
+    name: "Tasim",
+    age: 25,
+    isAdmin: false,
+    action: ()=>console.log("Hello Taifur"),
+    badges: ["badge1", "badge2"],
+}
+
+console.log(user2);
+console.log(user2.age);
+
